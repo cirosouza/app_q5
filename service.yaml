@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kubernetes-test-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: kubernetes-test-service
+  ports:
+    - port: 80
+      targetPort: 8080
+

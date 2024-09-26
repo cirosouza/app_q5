@@ -1,0 +1,8 @@
+services:
+  docker-test-service:
+    image: kubernetes-test-service
+    build:
+      context: ./
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
